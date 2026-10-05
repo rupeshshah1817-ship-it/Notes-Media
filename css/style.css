@@ -237,19 +237,11 @@ footer nav a:hover {
     margin-top: 8px;
 }
 /* Blog image hover effect */
-.blog-image img {
-    transition: transform 0.3s;
-}
-
-.blog-card:hover .blog-image img {
-    transform: scale(1.03);
-}
-/* Smooth image transition */
+/* Blog image hover effect */
 .blog-image img {
     transition: transform 0.3s ease;
 }
 
-/* Slightly zoom image when hovering */
 .blog-card:hover .blog-image img {
     transform: scale(1.05);
 }
