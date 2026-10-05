@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;600;700&display=swap');
 
+/* Apply consistent box sizing to all elements */
 * {
     box-sizing: border-box;
 }
 
+/* General page styling */
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F8F6F1;
 }
+
+/* Header and main navigation */
 header {
     background-color: #1F4D3A;
     padding: 20px;
@@ -18,43 +22,53 @@ header {
     align-items: center;
 }
 
-
-h1{
+/* Website title */
+h1 {
     font-family: 'Poppins', sans-serif;
     color: white;
     margin: 0;
 }
 
+/* Navigation list */
 .nav-list {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
+/* Navigation links */
 .nav-list a {
     text-decoration: none;
     color: white;
     font-weight: 500;
 }
+
+/* Navigation hover effect */
 .nav-list a:hover {
     color: #D97742;
 }
 
-
+/* Hero section */
 .hero {
     padding: 60px 20px;
     text-align: center;
 }
+
+/* Hero heading */
 .hero h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
     color: #1F4D3A;
 }
+
+/* Hero paragraph */
 .hero p {
     font-size: 18px;
     margin: 20px 0;
     color: #667085;
 }
+
+/* Hero button */
 .hero a {
     background-color: #D97742;
     color: white;
@@ -64,30 +78,60 @@ h1{
     border-radius: 6px;
     transition: 0.3s;
 }
+
+/* Hero button hover effect */
 .hero a:hover {
     background-color: #B85F32;
 }
+
+/* Featured blogs section */
 .featured {
     padding: 40px 20px;
 }
+
+/* Featured blogs heading */
 .featured h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 32px;
     color: #1F4D3A;
     text-align: center;
 }
+
+/* Blog card */
 .blog-card {
     background-color: white;
     padding: 20px;
-     margin-bottom: 20px;
-     border-radius: 8px;
-     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
 }
+
+/* Blog card hover effect */
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Blog card title */
+.blog-card h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #1F4D3A;
+    margin-top: 0;
+}
+
+/* Blog card paragraph */
+.blog-card p {
+    color: #667085;
+    line-height: 1.6;
+}
+
+/* Blog grid */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
+/* Read More button */
 .blog-card a {
     display: inline-block;
     background-color: #D97742;
@@ -97,28 +141,13 @@ h1{
     border-radius: 5px;
     transition: 0.3s;
 }
+
+/* Read More hover effect */
 .blog-card a:hover {
     background-color: #B85F32;
 }
-.blog-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
-}
-.blog-card:hover {
-    transform: translateY(-5px);
-}
-.blog-card h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #1F4D3A;
-    margin-top: 0;
-}
-.blog-card p {
-    color: #667085;
-    line-height: 1.6;
-}
+
+/* Footer */
 footer {
     background-color: #1F4D3A;
     color: white;
@@ -126,16 +155,101 @@ footer {
     padding: 30px 20px;
     margin-top: 40px;
 }
+
+/* Footer navigation */
 footer nav {
     margin-top: 15px;
 }
 
+/* Footer links */
 footer nav a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
 }
 
+/* Footer link hover effect */
 footer nav a:hover {
     color: #D97742;
+}
+
+/* Tablet responsive layout */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile responsive layout */
+@media (max-width: 480px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Blog page introduction */
+.blog-intro {
+    padding: 50px 20px 30px;
+    text-align: center;
+}
+
+/* Blog page heading */
+.blog-intro h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #1F4D3A;
+    margin-bottom: 15px;
+}
+
+/* Blog page introduction paragraph */
+.blog-intro p {
+    font-size: 18px;
+    color: #667085;
+    line-height: 1.6;
+}
+/* Blog list heading */
+.blog-list h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: #1F4D3A;
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* Blog images */
+.blog-image {
+    margin: 0 0 20px 0;
+}
+
+/* Blog image size */
+.blog-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+
+/* Blog image caption */
+.blog-image figcaption {
+    text-align: center;
+    font-size: 14px;
+    color: #667085;
+    margin-top: 8px;
+}
+/* Blog image hover effect */
+.blog-image img {
+    transition: transform 0.3s;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.03);
+}
+/* Smooth image transition */
+.blog-image img {
+    transition: transform 0.3s ease;
+}
+
+/* Slightly zoom image when hovering */
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
 }
